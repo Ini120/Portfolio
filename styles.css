@@ -1,0 +1,518 @@
+body{
+    background-color: #090909;
+    color: #f5f5f5;
+    font-family: "Inter", sans-serif;
+    margin: 0;
+}
+
+body{
+    font-family: "Inter", sans-serif;
+}
+
+h1,h2,h3,h4{
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.header{
+    display: flex;
+    justify-content:space-between;
+    border-bottom:1px solid rgba(255,255,255,.08);
+    margin-bottom: 20px;
+    align-items: center;
+    padding: 10px 20px;
+    max-width: 1500px;
+}
+
+
+.left-links{
+display: flex;
+    
+}
+
+.left-links span{
+    color: #00a8ff;
+}
+
+ul{
+    display: flex;
+    gap:30px;
+    align-items: center;
+    font-size: 17px;
+}
+
+li{
+    text-decoration: none;
+    list-style: none;
+}
+
+.right-links a{
+    text-decoration: none;
+    color: #f5f5f5;
+    transition: .3s;
+}
+
+.right-links a:hover{
+    color: #38bdf8
+}
+.button{
+    padding: 10px;
+    background-color: #00a8ff;
+    border-radius: 20px;
+    color: #000;
+    border: none;
+    font-size: 17px;
+}
+.button:hover{
+    background-color: #38bdf8;
+}
+
+.hero-section{
+    display: flex;
+    justify-content: space-around;
+}
+.left-hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    align-items: flex-start;
+
+}
+
+.line{
+    width: 30px;
+    height: 1px;
+    background-color: #00a8ff;
+    margin-bottom: 3px;
+    display: inline-block;
+    align-items: center;
+}
+
+.intro{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.intro h2{
+    font-size: 30px;
+    font-weight: 400;
+    margin: 0;
+}
+.left-hero h3{
+    font-size: 88px;
+    font-weight: 700;
+    margin: 0;
+}
+
+
+
+
+.social-icons a{
+    color: #f5f5f5;
+    font-size: 15px;
+    margin-right: 20px;
+    transition:0.3s;
+    text-decoration: none;
+    border: 1px solid #00a8ff;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.social-icons a:hover{
+    color: #00a8ff;
+}
+
+.left-hero div{
+    font-size: 50px;
+    line-height: 1.2;
+    margin:10px 0;
+}
+
+
+.left-hero p{
+    font-size: 20px;
+}
+
+.hero-badge{
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 10px 20px;
+
+    border: 1px solid #00a8ff;
+    border-radius: 30px;
+
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.hero-badge > span{
+    color: #00a8ff;
+    font-size: 40px;
+    line-height: 0;
+    position: relative;
+    top: -8px;
+    }
+
+
+
+
+.btn{
+    display: inline-block;
+    padding: 15px 28px;
+    border: 1px solid#00a8ff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+    color: white;
+    font-size: 16px;
+}
+
+.btn:hover{
+    background: #38bdf8;
+}
+
+/* ===========================
+   RIGHT HERO
+=========================== */
+
+.right-hero{
+    position: relative;
+    width: 500px;
+    height: 500px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===========================
+   SOFT GLOW
+=========================== */
+
+.right-hero::before{
+    content: "";
+    position: absolute;
+
+    width: 430px;
+    height: 430px;
+
+    background: radial-gradient(circle,
+    rgba(0,168,255,.18),
+    transparent 70%);
+
+    z-index: 0;
+}
+
+/* ===========================
+   GLOWING RING
+=========================== */
+
+.ring{
+    position: absolute;
+
+    width: 380px;
+    height: 380px;
+
+    border: 2px solid rgba(56,189,248,.35);
+
+    border-radius: 50%;
+
+    animation: ringRotate 20s linear infinite;
+
+    z-index: 1;
+}
+
+/* ===========================
+   BLOB
+=========================== */
+
+.blob{
+    position:absolute;
+
+    width:340px;
+    height:340px;
+
+    background:linear-gradient(
+    135deg,
+    #00A8FF,
+    #2563EB);
+
+    border-radius:
+    58% 42% 35% 65% /
+    52% 38% 62% 48%;
+
+    filter: blur(6px);
+
+    box-shadow:
+    0 0 50px rgba(0,168,255,.6),
+    0 0 100px rgba(0,168,255,.35);
+
+    animation: blob 8s ease-in-out infinite;
+
+    z-index:2;
+}
+
+/* ===========================
+   DOTS
+=========================== */
+
+.dots{
+    position:absolute;
+
+    width:170px;
+    height:170px;
+
+    background-image:
+    radial-gradient(circle,#38BDF8 2px,transparent 2px);
+
+    background-size:18px 18px;
+
+    opacity:.35;
+
+    animation:dotsFloat 6s ease-in-out infinite;
+
+    z-index:3;
+}
+
+.dots1{
+    top:-25px;
+    right:-35px;
+}
+
+.dots2{
+    bottom:-25px;
+    left:-35px;
+}
+
+/* ===========================
+   TECH ICONS
+=========================== */
+
+.tech{
+    position:absolute;
+
+    width:55px;
+    height:55px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:50%;
+
+    background:#141414;
+
+    border:1px solid #00A8FF;
+
+    color:#38BDF8;
+
+    font-size: 30px;
+
+    box-shadow:0 0 20px rgba(0,168,255,.2);
+
+    animation: float 4s ease-in-out infinite;
+
+    z-index:5;
+}
+
+.html{
+    top:40px;
+    left:-15px;
+}
+
+.css{
+    top:300px;
+    left:-25px;
+
+    animation-delay:1s;
+}
+
+.js{
+    top:170px;
+    right:-25px;
+
+    animation-delay:2s;
+}
+
+/* ===========================
+   PROFILE IMAGE
+=========================== */
+
+.right-hero img{
+    width:320px;
+
+    position:relative;
+
+    z-index:4;
+
+    animation:imageFloat 5s ease-in-out infinite;
+}
+
+/* ===========================
+   ANIMATIONS
+=========================== */
+
+@keyframes blob{
+
+0%{
+transform:translate(0,0) scale(1) rotate(0deg);
+border-radius:58% 42% 35% 65% / 52% 38% 62% 48%;
+}
+
+25%{
+transform:translate(18px,-15px) scale(1.05) rotate(5deg);
+border-radius:45% 55% 60% 40% / 35% 65% 35% 65%;
+}
+
+50%{
+transform:translate(-18px,12px) scale(.96) rotate(-5deg);
+border-radius:65% 35% 45% 55% / 60% 40% 60% 40%;
+}
+
+75%{
+transform:translate(12px,18px) scale(1.03) rotate(4deg);
+border-radius:40% 60% 35% 65% / 45% 55% 45% 55%;
+}
+
+100%{
+transform:translate(0,0) scale(1) rotate(0deg);
+border-radius:58% 42% 35% 65% / 52% 38% 62% 48%;
+}
+
+}
+
+@keyframes imageFloat{
+
+0%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+100%{
+transform:translateY(0);
+}
+
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-12px);
+}
+
+100%{
+transform:translateY(0);
+}
+
+}
+
+@keyframes dotsFloat{
+
+0%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-10px);
+}
+
+100%{
+transform:translateY(0);
+}
+
+}
+
+@keyframes ringRotate{
+
+from{
+transform:rotate(0deg);
+}
+
+to{
+transform:rotate(360deg);
+}
+
+}
+
+.skills{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+
+    gap:50px;
+
+    margin-top:50px;
+}
+
+.skill i{
+    font-size: 60px;
+    margin-bottom: 12px;
+}
+
+.skill{
+    width: 140px;
+    height: 140px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid #00a8ff;
+    border-radius: 15px;
+
+    transition: .3s;
+    cursor: pointer;
+}
+
+.line1{
+    width: 100%;
+    height: 1px;
+    background:rgba(255,255,255,.08);
+    margin-bottom: 0;
+    display: inline-block;
+    align-items: center;
+    margin-top: 50px;
+
+}
+
+.skill-section{
+    text-align:center;
+    margin-top:70px;
+}
+
+.skill-section h2{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.skill-section p{
+    color:#a0a0a0;
+    font-size:18px;
+}
+
+.skill{
+    background:#111111;
+}
+
+.skill:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#38bdf8;
+
+    box-shadow:0 0 25px rgba(0,168,255,.35);
+
+}
