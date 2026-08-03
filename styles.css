@@ -1,3 +1,173 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    overflow-x:hidden;
+}
+
+
+
+@media screen and (max-width: 768px){
+    .hero-section{
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        text-align: center;
+    }
+    .left-hero{
+        align-items: center;
+    }
+
+
+    .left-hero h3{
+        font-size: 60px;
+    }
+
+    .header{
+        justify-content:space-between;
+        padding: 0 30px;
+    }
+}
+
+
+
+
+@media (max-width:768px){
+
+    .header{
+        flex-direction:column;
+        padding:20px;
+        gap:20px;
+    }
+
+    ul{
+        gap:15px;
+        flex-wrap:wrap;
+        justify-content:center;
+        padding:0;
+    }
+
+    .hero-section{
+        flex-direction:column-reverse;
+        padding:30px 20px;
+        gap:50px;
+    }
+
+    .left-hero{
+        align-items:center;
+        text-align:center;
+    }
+
+    .left-hero h3{
+        font-size:52px;
+    }
+
+    .hero-badge{
+        font-size:16px;
+        padding:10px 16px;
+    }
+
+    .left-hero p{
+        font-size:17px;
+    }
+
+    .social-icons{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+
+    .right-hero{
+        width:350px;
+        height:350px;
+    }
+
+    .right-hero img{
+        width:230px;
+    }
+
+    .blob{
+        width:260px;
+        height:260px;
+    }
+
+    .ring{
+        width:280px;
+        height:280px;
+    }
+
+    .tech{
+        width:45px;
+        height:45px;
+        font-size:20px;
+    }
+
+}
+
+
+
+@media (max-width:480px){
+
+    .left-hero h3{
+        font-size:42px;
+    }
+
+    .intro h2{
+        font-size:22px;
+    }
+
+    .hero-badge{
+        font-size:14px;
+    }
+
+    .left-hero p{
+        font-size:15px;
+    }
+
+    .right-hero{
+        width:280px;
+        height:280px;
+    }
+
+    .right-hero img{
+        width:190px;
+    }
+
+    .blob{
+        width:220px;
+        height:220px;
+    }
+
+    .ring{
+        width:240px;
+        height:240px;
+    }
+
+    .skills{
+        gap:20px;
+    }
+
+    .skill{
+        width:120px;
+        height:120px;
+    }
+
+    .skill i{
+        font-size:45px;
+    }
+
+}
+
+
+
+
+
+
+
 body{
     background-color: #090909;
     color: #f5f5f5;
