@@ -663,6 +663,14 @@ transform:rotate(360deg);
     margin-top:70px;
 }
 
+.skill-section a{
+color:#00A8FF;
+transition: .3s;
+}
+
+.skill-section a:hover{
+    color: hsl(221, 100%, 85%);
+}
 .skill-section h2{
     font-size:42px;
     margin-bottom:10px;
@@ -685,4 +693,20 @@ transform:rotate(360deg);
 
     box-shadow:0 0 25px rgba(0,168,255,.35);
 
+}
+
+.line4{
+width: 100%;
+    height: 1px;
+    background:rgba(255,255,255,.08);
+    margin-bottom: 0;
+    display: inline-block;
+    align-items: center;
+    margin-top: 50px;
+}
+
+fotter{
+    display: flex;
+    justify-content: center;
+    padding:20px;
 }
