@@ -1261,18 +1261,14 @@ footer{
 =========================== */
 @media (max-width: 768px){
 
-    .back-btn{
-        margin-left:15px;
-        margin-top:10px;
-    }
-
     .skills-head{
-        margin:40px 20px 0;
         text-align:center;
+        margin:40px 20px 0;
     }
 
     .skills-head h1{
         font-size:40px;
+        max-width:none;
     }
 
     .skills-head p{
@@ -1281,63 +1277,57 @@ footer{
         text-align:center;
     }
 
-    .separator-line{
-        margin-top:40px;
-    }
-
     .tech-stack-header{
         margin-left:20px;
-        margin-top:30px;
     }
 
     .tech-stack{
-        margin:40px auto;
-        padding:0 20px;
+        display:flex;
+        flex-direction:column;
         gap:25px;
+        padding:0 20px;
+        margin:40px auto;
     }
 
     .stack{
-        min-height:190px;
-        padding:25px 20px;
-        gap:25px;
+        width:100%;
+        min-height:180px;
+        padding:20px;
+        gap:20px;
     }
 
     .stack > i{
         width:80px;
         height:80px;
-        font-size:50px;
+        font-size:45px;
     }
 
-    .stack-container p{
-        font-size:20px;
+    .stack p{
+        font-size:19px;
     }
 
-    .stack-container small{
+    .stack small{
         font-size:12px;
     }
 
     .stack-dividers{
-        height:120px;
+        height:110px;
     }
 
     .card-middle{
-        gap:12px;
+        gap:10px;
     }
 
     .card-middle h2{
-        font-size:12px;
+        font-size:11px;
     }
 
     .skill-percent{
-        font-size:32px;
+        font-size:30px;
     }
 
     .progress{
         height:7px;
-    }
-
-    .card-middle small{
-        font-size:12px;
     }
 
 }
@@ -1349,39 +1339,29 @@ footer{
 @media (max-width: 480px){
 
     .back-btn{
-        margin-left:10px;
-        margin-top:8px;
-        padding:7px 12px;
-        font-size:13px;
+        margin-left:15px;
+        margin-top:10px;
     }
 
     .skills-head{
         margin:30px 15px 0;
     }
 
-    .skills-head-p{
-        font-size:15px;
-        margin-bottom:8px;
-    }
-
     .skills-head h1{
         font-size:32px;
-        line-height:1.1;
     }
 
     .skills-head p{
         font-size:14px;
-        line-height:1.6;
-        margin-top:12px;
     }
 
-    .separator-line{
-        margin-top:30px;
+    .skills-head-p{
+        font-size:15px;
     }
 
     .tech-stack-header{
-        margin:25px 15px 0;
-        gap:8px;
+        margin-left:15px;
+        margin-top:25px;
     }
 
     .tech-stack-header h2{
@@ -1389,79 +1369,70 @@ footer{
         letter-spacing:2px;
     }
 
-    .dot-skills{
-        width:5px;
-        height:5px;
-    }
-
     .tech-stack{
-        margin:30px auto;
-        padding:0 15px;
+        display:flex;
+        flex-direction:column;
         gap:18px;
+        padding:0 15px;
+        margin:30px auto;
     }
 
+    /* ONE CARD PER ROW */
     .stack{
+        width:100%;
         min-height:150px;
-        padding:18px 15px;
+        padding:15px;
         gap:15px;
-
         border-radius:12px;
     }
 
     .stack > i{
-        width:55px;
-        height:55px;
+        width:60px;
+        height:60px;
         font-size:32px;
         margin-bottom:0;
     }
 
     .stack-container{
         min-width:0;
-        flex:1;
     }
 
-    .stack-container p{
+    .stack p{
         font-size:16px;
         margin:4px 0;
     }
 
-    .stack-container small{
+    .stack small{
         font-size:10px;
-        line-height:1.4;
-        display:block;
+        margin:4px 0;
     }
 
     .stack-dividers{
         height:90px;
-        flex-shrink:0;
-        margin-right:0;
+        margin:0;
     }
 
     .card-middle{
-        gap:8px;
-        min-width:65px;
-        flex:0 1 90px;
+        gap:7px;
+        min-width:0;
     }
 
     .card-middle h2{
         font-size:9px;
         letter-spacing:1px;
-        white-space:nowrap;
-    }
-
-    .skill-percent{
-        font-size:22px;
-    }
-
-    .progress{
-        width:100%;
-        height:5px;
-        margin:5px 0 5px;
     }
 
     .card-middle small{
         font-size:9px;
-        white-space:nowrap;
+    }
+
+    .skill-percent{
+        font-size:24px;
+    }
+
+    .progress{
+        height:5px;
+        margin:5px 0;
     }
 
 }
@@ -1472,36 +1443,28 @@ footer{
 =========================== */
 @media (max-width: 360px){
 
-    .skills-head h1{
-        font-size:28px;
-    }
-
-    .skills-head p{
-        font-size:13px;
-    }
-
     .tech-stack{
         padding:0 10px;
-        gap:12px;
+        gap:15px;
     }
 
     .stack{
-        min-height:135px;
-        padding:15px 10px;
+        padding:12px;
         gap:10px;
+        min-height:135px;
     }
 
     .stack > i{
-        width:45px;
-        height:45px;
-        font-size:26px;
+        width:50px;
+        height:50px;
+        font-size:27px;
     }
 
-    .stack-container p{
+    .stack p{
         font-size:14px;
     }
 
-    .stack-container small{
+    .stack small{
         font-size:9px;
     }
 
@@ -1509,25 +1472,16 @@ footer{
         height:75px;
     }
 
-    .card-middle{
-        min-width:55px;
-        flex-basis:65px;
+    .skill-percent{
+        font-size:20px;
     }
 
     .card-middle h2{
         font-size:8px;
     }
 
-    .skill-percent{
-        font-size:19px;
-    }
-
     .card-middle small{
         font-size:8px;
-    }
-
-    .progress{
-        height:4px;
     }
 
 }
