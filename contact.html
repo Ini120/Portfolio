@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Me | Inioluwa Aiyenuyo</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body class="contact-page">
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <section class="header">
+
+        <div class="left-links">
+            <h1>Ini <span>.</span></h1>
+        </div>
+
+        <div class="right-links">
+
+            <input
+                type="checkbox"
+                id="nav-toggle"
+                class="nav-toggle"
+            >
+
+            <label
+                for="nav-toggle"
+                class="hamburger"
+                aria-label="Toggle navigation"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <nav>
+                <ul>
+
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="services.html">Services</a>
+                    </li>
+
+                    <li>
+                        <a href="work.html">Work</a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+
+                    <li>
+                        <a href="hire.html" class="button">
+                            Hire Me
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT HERO
+    ========================== -->
+
+    <main class="contact-container">
+
+        <section class="contact-hero">
+
+            <!-- LEFT -->
+             
+
+            <div class="contact-left">
+                 <a href="index.html" class="back-btn">
+        <i class="fa-solid fa-arrow-left"></i>
+        <span>Back to Home</span>
+    </a>
+
+                <div class="contact-eyebrow">
+
+                    <span class="contact-eyebrow-dot"></span>
+
+                    GET IN TOUCH
+
+                </div>
+
+
+                <h1>
+                    Let's build something
+                    <span>meaningful.</span>
+                </h1>
+
+
+                <p class="contact-intro">
+
+                    Have a project in mind, want to collaborate, or simply
+                    want to talk about technology? I'd love to hear from you.
+
+                    Whether you're reaching out about a project, an
+                    opportunity, or just want to say hello, feel free to
+                    send me a message.
+
+                </p>
+
+
+                <!-- CONTACT DETAILS -->
+
+                <div class="contact-details">
+
+                    <a href="mailto:your@email.com" class="contact-detail">
+
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+
+                        <div>
+                            <span>Email</span>
+                            <strong>ininuyo@gmail.com</strong>
+                        </div>
+
+                    </a>
+
+
+                    <a
+                        href="https://github.com/"
+                        class="contact-detail"
+                        target="_blank"
+                    >
+
+                        <div class="contact-icon github-icon">
+                            <i class="fa-brands fa-github"></i>
+                        </div>
+
+                        <div>
+                            <span>GitHub</span>
+                            <strong>github.com/Ini120</strong>
+                        </div>
+
+                    </a>
+
+
+                    <a
+                        href="https://www.linkedin.com/"
+                        class="contact-detail"
+                        target="_blank"
+                    >
+
+                        <div class="contact-icon linkedin-icon">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </div>
+
+                        <div>
+                            <span>LinkedIn</span>
+                            <strong>Connect with me</strong>
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT -->
+
+            <div class="contact-right">
+
+                <div class="contact-form-card">
+
+                    <div class="form-heading">
+
+                        <span>01</span>
+
+                        <div>
+                            <h2>Send me a message</h2>
+
+                            <p>
+                                I'll get back to you as soon as I can.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <form>
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="name">
+                                    Your Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="name"
+                                    placeholder="John Doe"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="email">
+                                    Email Address
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    placeholder="john@email.com"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="subject">
+                                Subject
+                            </label>
+
+                            <input
+                                type="text"
+                                id="subject"
+                                placeholder="What's this about?"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="message">
+                                Message
+                            </label>
+
+                            <textarea
+                                id="message"
+                                rows="6"
+                                placeholder="Tell me a little about your project..."
+                            ></textarea>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="contact-submit"
+                        >
+
+                            Send Message
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- BOTTOM LINE -->
+
+        <div class="contact-bottom">
+
+            <span>OPEN TO OPPORTUNITIES</span>
+
+            <span class="contact-bottom-line"></span>
+
+            <span>Let's connect.</span>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+        &copy; Aiyenuyo Inioluwa Portfolio
+    </footer>
+
+</body>
+
+</html>
