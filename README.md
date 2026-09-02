@@ -1,35 +1,40 @@
-# Portfolio
-# 🌐 Inioluwa Aiyenuyo | Personal Portfolio
+# Inioluwa Aiyenuyo | Personal Portfolio
 
-Welcome to my personal portfolio website! This project showcases who I am, my skills, and my journey as a Software Engineering student and aspiring Frontend Developer.
+Welcome to my personal portfolio website.
 
-## 🚀 About the Project
+This project is a personal space where I showcase my skills, projects, experience, and growth as a Software Engineering student and aspiring Frontend Developer.
 
-This portfolio was built to highlight my technical skills, projects, and passion for creating clean, responsive, and user-friendly websites. It serves as my personal space on the web where visitors can learn more about me and my work.
+## About the Project
 
-## ✨ Features
+This portfolio was designed and developed to represent my journey into software development and provide an overview of the technologies I am learning and the projects I have built.
 
-- Modern and responsive design
+The website focuses on a clean, modern, responsive interface with subtle animations and interactive elements to create an engaging user experience.
+
+## Features
+
+- Responsive design across desktop, tablet, and mobile devices
 - Animated hero section
-- Floating blob and interactive UI effects
-- Skills section with official technology icons
+- Interactive UI elements
+- Floating blob animation
+- Skills section with technology icons
+- Project showcase
 - Social media links
 - Downloadable CV
-- Mobile-friendly layout
-- Smooth CSS animations
+- Smooth CSS animations and transitions
+- Mobile-friendly navigation and layout
 
-## 🛠️ Built With
+## Technologies Used
 
 - HTML5
 - CSS3
 - JavaScript
 - Font Awesome
-- Devicon Icons
+- Devicon
 - Google Fonts
 
-## 📂 Project Structure
+## Project Structure
 
-```
+```text
 Portfolio/
 │
 ├── index.html
@@ -38,28 +43,3 @@ Portfolio/
 ├── images/
 ├── assets/
 └── README.md
-```
-
-## 📱 Responsive Design
-
-The website is optimized for:
-
-- Desktop
-- Tablet
-- Mobile devices
-
-## 🎯 Goals
-
-This project is part of my frontend development journey. My goal is to continuously improve this portfolio as I learn new technologies and build more projects.
-
-## 📬 Contact
-
-Feel free to connect with me!
-
-- GitHub: https://github.com/Ini120
-- LinkedIn: https://linkedin.com/in/AiyenuyoInioluwa
-- Email: ininuyo08@gmail.com
-
-## 📄 License
-
-This project is open source and available under the MIT License.
