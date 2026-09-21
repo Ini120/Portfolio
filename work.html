@@ -1,37 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="description" content="Projects built by Inioluwa Aiyenuyo while learning frontend development.">
     <title>Work | Inioluwa Aiyenuyo</title>
 
-    <!-- Font Awesome -->
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    >
+    <script>document.documentElement.classList.add("js");</script>
 
-    <!-- Your main CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 
-
+    <script src="script.js" defer></script>
 </head>
-
-
 <body>
 
+<div class="scroll-progress" aria-hidden="true"></div>
 
 <!-- =========================
      HEADER
-========================= -->
-
- <section class="header">
+========================== -->
+<header class="header">
 
     <div class="left-links">
-        <h1>Ini <span>.</span></h1>
+        <a href="index.html" class="logo" aria-label="Home">Ini<span>.</span></a>
     </div>
 
     <div class="right-links">
@@ -44,40 +39,35 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
+                <li><a href="my_skills.html">Skills</a></li>
                 <li><a href="work.html">Work</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li>
-                    <a href="hire.html" class="button">Hire Me</a>
-                </li>
+                <li><a href="hire.html" class="button">Hire Me</a></li>
             </ul>
         </nav>
     </div>
 
-</section>
-
-
-
-
-<!-- =========================
-     WORK HERO
-========================= -->
+</header>
 
 <main>
 
-<section class="work-hero">
+<!-- =========================
+     PAGE HEADING
+========================== -->
+<section class="page-hero">
 
-    <div class="work-hero-eyebrow">
-        <span></span>
-        MY WORK
-    </div>
+    <a href="index.html" class="back-btn" data-reveal="up">
+        <i class="fa-solid fa-arrow-left"></i>
+        <span>Back to Home</span>
+    </a>
 
-    <h1>
-        Things I've
-        <span>Built.</span>
+    <span class="section-label" data-reveal="up" data-delay="80">MY WORK</span>
+
+    <h1 data-reveal="up" data-delay="160">
+        Things I've <span>built.</span>
     </h1>
 
-    <p>
+    <p data-reveal="up" data-delay="240">
         A collection of websites, interactive projects and experiments
         I've built while developing my skills in frontend development.
     </p>
@@ -85,61 +75,34 @@
 </section>
 
 
-
 <!-- =========================
      PROJECTS
-========================= -->
-
+========================== -->
 <section class="all-projects">
 
-
     <!-- PROJECT 01 -->
-
-    <article class="large-project">
+    <article class="large-project" data-reveal="up">
 
         <div class="large-project-preview">
-
-            <img
-                src="Screenshot 2026-09-05 212207.png"
-                alt="Placewick project preview"
-            >
-
+            <img src="Screenshot 2026-09-05 212207.png" alt="Placewick project preview" loading="lazy">
             <div class="preview-overlay">
-
-                <a href="https://ini120.github.io/placewick" class="preview-button">
+                <a href="https://ini120.github.io/placewick" class="preview-button" target="_blank" rel="noopener">
+                    Open Project
                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
-
             </div>
-
         </div>
 
-
         <div class="large-project-info">
-
             <div class="project-heading">
-
                 <div>
-
-                    <span class="large-project-number">
-                        01
-                    </span>
-
-                    <span class="large-project-category">
-                        Web Platform
-                    </span>
-
+                    <span class="large-project-number">01</span>
+                    <span class="large-project-category">Web Platform</span>
                 </div>
-
-                <span class="project-status">
-                    Personal Project
-                </span>
-
+                <span class="project-status">Personal Project</span>
             </div>
 
-
             <h2>Placewick</h2>
-
 
             <p>
                 A platform concept designed to connect Nigerian students
@@ -148,83 +111,50 @@
                 experience for students searching for opportunities.
             </p>
 
-
             <div class="large-project-tech">
-
                 <span>HTML</span>
                 <span>CSS</span>
                 <span>JavaScript</span>
-
             </div>
 
-
             <div class="large-project-links">
-
-                <a href="https://ini120.github.io/placewick" target="_blank">
+                <a href="https://ini120.github.io/placewick" target="_blank" rel="noopener">
                     View Live Project
                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
-
-                <a href="https://github.com/Ini120/placewick.git" target="_blank">
+                <a href="https://github.com/Ini120/placewick" target="_blank" rel="noopener">
                     View Code
                     <i class="fa-brands fa-github"></i>
                 </a>
-
             </div>
-
         </div>
 
     </article>
 
 
-
     <!-- PROJECT 02 -->
-
-    <article class="large-project reverse">
+    <article class="large-project reverse" data-reveal="up">
 
         <div class="large-project-preview">
-
-            <img
-                src="Screenshot 2026-09-05 212246.png"
-                alt="Personal portfolio project preview"
-            >
-
+            <img src="Screenshot 2026-09-05 212246.png" alt="Personal portfolio project preview" loading="lazy">
             <div class="preview-overlay">
-
-                <a href="https://ini120.github.io/Portfolio" class="preview-button">
+                <a href="https://ini120.github.io/Portfolio" class="preview-button" target="_blank" rel="noopener">
+                    Open Project
                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
-
             </div>
-
         </div>
 
-
         <div class="large-project-info">
-
             <div class="project-heading">
-
                 <div>
-
-                    <span class="large-project-number">
-                        02
-                    </span>
-
-                    <span class="large-project-category">
-                        Portfolio
-                    </span>
-
+                    <span class="large-project-number">02</span>
+                    <span class="large-project-category">Portfolio</span>
                 </div>
-
-                <span class="project-status">
-                    Personal Project
-                </span>
-
+                <span class="project-status">Personal Project</span>
             </div>
 
-
             <h2>Personal Portfolio</h2>
-
 
             <p>
                 A personal developer portfolio built from scratch to
@@ -233,83 +163,50 @@
                 clean layouts, responsive design and usability.
             </p>
 
-
             <div class="large-project-tech">
-
                 <span>HTML</span>
                 <span>CSS</span>
                 <span>JavaScript</span>
-
             </div>
 
-
             <div class="large-project-links">
-
-                <a href="https://ini120.github.io/Portfolio" target="_blank">
+                <a href="https://ini120.github.io/Portfolio" target="_blank" rel="noopener">
                     View Live Project
                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
-
-                <a href="https://github.com/Ini120/Portfolio.git" target="_blank">
+                <a href="https://github.com/Ini120/Portfolio" target="_blank" rel="noopener">
                     View Code
                     <i class="fa-brands fa-github"></i>
                 </a>
-
             </div>
-
         </div>
 
     </article>
 
 
-
     <!-- PROJECT 03 -->
-
-    <article class="large-project">
+    <article class="large-project" data-reveal="up">
 
         <div class="large-project-preview">
-
-            <img
-                src="calculator.png"
-                alt="JavaScript calculator project preview"
-            >
-
+            <img src="calculator.png" alt="JavaScript calculator project preview" loading="lazy">
             <div class="preview-overlay">
-
-                <a href="https://ini120.github.io/Calculator/" class="preview-button">
+                <a href="https://ini120.github.io/Calculator/" class="preview-button" target="_blank" rel="noopener">
+                    Open Project
                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
-
             </div>
-
         </div>
 
-
         <div class="large-project-info">
-
             <div class="project-heading">
-
                 <div>
-
-                    <span class="large-project-number">
-                        03
-                    </span>
-
-                    <span class="large-project-category">
-                        JavaScript
-                    </span>
-
+                    <span class="large-project-number">03</span>
+                    <span class="large-project-category">JavaScript</span>
                 </div>
-
-                <span class="project-status">
-                    Practice Project
-                </span>
-
+                <span class="project-status">Practice Project</span>
             </div>
 
-
             <h2>JavaScript Calculator</h2>
-
 
             <p>
                 A responsive calculator built with HTML, CSS and JavaScript.
@@ -318,83 +215,50 @@
                 basic JavaScript logic.
             </p>
 
-
             <div class="large-project-tech">
-
                 <span>HTML</span>
                 <span>CSS</span>
                 <span>JavaScript</span>
-
             </div>
 
-
             <div class="large-project-links">
-
-                <a href="https://ini120.github.io/Calculator/" target="_blank">
+                <a href="https://ini120.github.io/Calculator/" target="_blank" rel="noopener">
                     View Live Project
                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
-
-                <a href="https://github.com/Ini120/Calculator.git" target="_blank">
+                <a href="https://github.com/Ini120/Calculator" target="_blank" rel="noopener">
                     View Code
                     <i class="fa-brands fa-github"></i>
                 </a>
-
             </div>
-
         </div>
 
     </article>
 
 
-
     <!-- PROJECT 04 -->
-
-    <article class="large-project reverse">
+    <article class="large-project reverse" data-reveal="up">
 
         <div class="large-project-preview">
-
-            <img
-                src="ROCK-PAPER-SCISSORS.png"
-                alt="Rock Paper Scissors project preview"
-            >
-
+            <img src="ROCK-PAPER-SCISSORS.png" alt="Rock Paper Scissors project preview" loading="lazy">
             <div class="preview-overlay">
-
-                <a href="https://ini120.github.io/Rock-Paper-scissors-Game/" class="preview-button">
+                <a href="https://ini120.github.io/Rock-Paper-scissors-Game/" class="preview-button" target="_blank" rel="noopener">
+                    Open Project
                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
-
             </div>
-
         </div>
 
-
         <div class="large-project-info">
-
             <div class="project-heading">
-
                 <div>
-
-                    <span class="large-project-number">
-                        04
-                    </span>
-
-                    <span class="large-project-category">
-                        JavaScript
-                    </span>
-
+                    <span class="large-project-number">04</span>
+                    <span class="large-project-category">JavaScript</span>
                 </div>
-
-                <span class="project-status">
-                    Practice Project
-                </span>
-
+                <span class="project-status">Practice Project</span>
             </div>
 
-
             <h2>Rock Paper Scissors</h2>
-
 
             <p>
                 A browser-based Rock Paper Scissors game created to practice
@@ -402,177 +266,133 @@
                 user interaction.
             </p>
 
-
             <div class="large-project-tech">
-
                 <span>HTML</span>
                 <span>CSS</span>
                 <span>JavaScript</span>
-
             </div>
 
-
             <div class="large-project-links">
-
-                <a href="https://ini120.github.io/Rock-Paper-scissors-Game/" target="_blank">
+                <a href="https://ini120.github.io/Rock-Paper-scissors-Game/" target="_blank" rel="noopener">
                     View Live Project
                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
-
-                <a href="https://github.com/Ini120/Rock-Paper-scissors-Game.git" target="_blank">
+                <a href="https://github.com/Ini120/Rock-Paper-scissors-Game" target="_blank" rel="noopener">
                     View Code
                     <i class="fa-brands fa-github"></i>
                 </a>
-
             </div>
-
         </div>
 
     </article>
 
 
     <!-- PROJECT 05 -->
+    <article class="large-project" data-reveal="up">
 
-<article class="large-project">
-
-    <div class="large-project-preview">
-
-        <img
-            src="PHP-circle calculator.png"
-            alt="PHP Circle Calculator project preview"
-        >
-
-        <div class="preview-overlay">
-
-            <a href="php-circle-calculator.infinityfreeapp.com" class="preview-button" target="_blank">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                View Live Project
-            </a>
-
+        <div class="large-project-preview">
+            <img src="PHP-circle calculator.png" alt="PHP Circle Calculator project preview" loading="lazy">
+            <div class="preview-overlay">
+                <a href="https://php-circle-calculator.infinityfreeapp.com" class="preview-button" target="_blank" rel="noopener">
+                    Open Project
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
         </div>
 
-    </div>
-
-
-    <div class="large-project-info">
-
-        <div class="project-heading">
-
-            <div>
-
-                <span class="large-project-number">
-                    05
-                </span>
-
-                <span class="large-project-category">
-                    PHP
-                </span>
-
+        <div class="large-project-info">
+            <div class="project-heading">
+                <div>
+                    <span class="large-project-number">05</span>
+                    <span class="large-project-category">PHP</span>
+                </div>
+                <span class="project-status">Practice Project</span>
             </div>
 
-            <span class="project-status">
-                Practice Project
-            </span>
+            <h2>PHP Circle Calculator</h2>
 
-        </div>
+            <p>
+                A simple and responsive circle calculator built with PHP, HTML
+                and CSS. Users enter a radius, and the app calculates the
+                circumference, area and volume of a sphere using server-side
+                form handling.
+            </p>
 
+            <div class="large-project-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>PHP</span>
+            </div>
 
-        <h2>PHP Circle Calculator</h2>
-
-
-        <p>
-            A simple and responsive circle calculator built with PHP, HTML,
-            and CSS. Users enter a radius, and the app calculates the
-            circumference, area, and volume of a sphere using server-side
-            form handling.
-        </p>
-
-
-        <div class="large-project-tech">
-
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>PHP</span>
-
-        </div>
-
-
-        <div class="large-project-links">
-
-            <a href="https://github.com/Ini120/PHP-Circle-Calculator.git" target="_blank">
+            <div class="large-project-links">
+                <a href="https://php-circle-calculator.infinityfreeapp.com" target="_blank" rel="noopener">
                     View Live Project
                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
-
-            <a href="https://github.com/Ini120/PHP-Circle-Calculator.git" target="_blank">
-                View Code
-                <i class="fa-brands fa-github"></i>
-            </a>
-
+                <a href="https://github.com/Ini120/PHP-Circle-Calculator" target="_blank" rel="noopener">
+                    View Code
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
         </div>
 
-    </div>
-
-</article>
-
+    </article>
 
 </section>
 
 
-
 <!-- =========================
-     CTA
-========================= -->
-
+     CALL TO ACTION
+========================== -->
 <section class="work-cta">
 
-    <div class="work-cta-line"></div>
-
-    <div class="work-cta-content">
+    <div class="work-cta-content" data-reveal="up">
 
         <div>
-
-            <span class="work-cta-label">
-                HAVE A PROJECT IN MIND?
-            </span>
-
-            <h2>
-                Let's build something
-                <span>together.</span>
-            </h2>
-
+            <span class="section-label">HAVE A PROJECT IN MIND?</span>
+            <h2>Let's build something <span>together.</span></h2>
         </div>
 
-
-        <a href="hire.html" class="work-cta-button">
-
+        <a href="hire.html" class="hero-btn">
             Let's Work Together
-
             <i class="fa-solid fa-arrow-right"></i>
-
         </a>
 
     </div>
 
 </section>
 
-
 </main>
 
-
+<div class="divider"></div>
 
 <!-- =========================
      FOOTER
-========================= -->
+========================== -->
+<footer class="site-footer">
 
-<footer class="footer">
+    <div class="footer-brand">
+        <span class="footer-logo">Ini<span>.</span></span>
+        <p>&copy; <span id="year">2026</span> Aiyenuyo Inioluwa. Built from scratch.</p>
+    </div>
 
-    <p>
-        © 2026 Inioluwa Aiyenuyo. All rights reserved.
-    </p>
+    <div class="footer-links">
+        <a href="https://github.com/Ini120" target="_blank" rel="noopener" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/yourusername" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="mailto:ininuyo08@gmail.com" aria-label="Email">
+            <i class="fa-solid fa-envelope"></i>
+        </a>
+    </div>
 
 </footer>
 
+<a href="#top" class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+</a>
 
 </body>
 </html>

@@ -3,21 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PORTFOLIO-INIOLUWA AIYENUYO</title>
-    <link rel = "stylesheet" href="styles.css">
-    <link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <meta name="description" content="Inioluwa Aiyenuyo, Software Engineering student and aspiring Frontend Developer building clean, accessible web experiences.">
+    <title>Inioluwa Aiyenuyo | Frontend Developer</title>
+
+    <!-- Lets the CSS know JavaScript is running, so reveal effects never hide content when JS is off -->
+    <script>document.documentElement.classList.add("js");</script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="script.js" defer></script>
 </head>
 <body>
-    
-    <section class="header">
+
+<!-- Thin bar at the very top that fills as you scroll -->
+<div class="scroll-progress" aria-hidden="true"></div>
+
+<!-- =========================
+     HEADER
+========================== -->
+<header class="header">
 
     <div class="left-links">
-        <h1>Ini <span>.</span></h1>
+        <a href="#home" class="logo" aria-label="Back to top">Ini<span>.</span></a>
     </div>
 
     <div class="right-links">
@@ -29,293 +41,198 @@
         </label>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="my_skills.html">Skills</a></li>
                 <li><a href="work.html">Work</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li>
-                    <a href="hire.html" class="button">Hire Me</a>
-                </li>
+                <li><a href="hire.html" class="button">Hire Me</a></li>
             </ul>
         </nav>
     </div>
 
-</section>
+</header>
 
-<section class="hero-section">
+<main>
 
-    <!-- =========================
-         LEFT HERO
-    ========================== -->
+<!-- =========================
+     HERO
+========================== -->
+<section class="hero-section" id="home">
 
     <div class="left-hero">
 
-        <div class="hero-eyebrow">
-            <span class="eyebrow-dot"></span>
-                FRONTEND DEVELOPER
+        <div class="hero-eyebrow" data-reveal="up">
+            FRONTEND DEVELOPER
         </div>
 
-        <h1>
+        <h1 data-reveal="up" data-delay="100">
             Building digital
             <span>experiences.</span>
         </h1>
 
-        <p class="hero-description">
+        <p class="hero-description" data-reveal="up" data-delay="200">
             I'm <strong>Inioluwa Aiyenuyo</strong>, a Software Engineering
             student and aspiring Frontend Developer focused on creating
             clean, accessible and user-friendly web experiences.
         </p>
 
-        <div class="hero-actions">
-
-            <a href="hire.html" class="hero-btn">
+        <div class="hero-actions" data-reveal="up" data-delay="300">
+            <a href="#contact" class="hero-btn">
                 Let's Work Together
                 <i class="fa-solid fa-arrow-right"></i>
             </a>
-
-            <a href="my_skills.html" class="hero-outline-btn">
+            <a href="#skills" class="hero-outline-btn">
                 Explore My Skills
             </a>
-
         </div>
 
-        <div class="find-me">
+        <div class="find-me" data-reveal="up" data-delay="400">
+            <p>You can find me on</p>
+            <div class="find-me-links">
+                <a href="https://github.com/Ini120" target="_blank" rel="noopener" aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/yourusername" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="mailto:ininuyo08@gmail.com" aria-label="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>Email</span>
+                </a>
+            </div>
+        </div>
 
-    <p>You can find me on</p>
-
-    <div class="find-me-links">
-
-        <a href="https://github.com/Ini120" target="_blank" aria-label="GitHub">
-            <i class="fa-brands fa-github"></i>
-            <span>GitHub</span>
-        </a>
-
-        <a href="https://www.linkedin.com/in/yourusername" target="_blank" aria-label="LinkedIn">
-            <i class="fa-brands fa-linkedin"></i>
-            <span>LinkedIn</span>
-        </a>
-
-        <a href="mailto:ininuyo08@gmail.com" aria-label="Email">
-            <i class="fa-solid fa-envelope"></i>
-            <span>Email</span>
-        </a>
-
-    </div>
-
-</div>
-
-
-        <div class="hero-meta">
-
+        <div class="hero-meta" data-reveal="up" data-delay="500">
             <div class="meta-item">
                 <span class="meta-number">06</span>
                 <span>Technologies</span>
             </div>
-
             <div class="meta-divider"></div>
-
             <div class="meta-item">
                 <span class="meta-number">01+</span>
                 <span>Years Learning</span>
             </div>
-
             <div class="meta-divider"></div>
-
             <div class="meta-item">
                 <span class="meta-number">∞</span>
                 <span>Things to Build</span>
             </div>
-
         </div>
 
     </div>
 
-
-    <!-- =========================
-         RIGHT HERO
-         DEVELOPER WORKSPACE
-    ========================== -->
-
-    <div class="right-hero">
+    <!-- RIGHT HERO: DEVELOPER WORKSPACE -->
+    <div class="right-hero" data-reveal="fade" data-delay="250" aria-hidden="true">
 
         <div class="workspace-glow"></div>
-
-        <!-- Floating HTML icon -->
 
         <div class="floating-tech html-tech">
             <i class="fa-brands fa-html5"></i>
         </div>
-
-        <!-- Floating CSS icon -->
-
         <div class="floating-tech css-tech">
             <i class="fa-brands fa-css3-alt"></i>
         </div>
-
-        <!-- Floating JS icon -->
-
         <div class="floating-tech js-tech">
             <i class="fa-brands fa-js"></i>
         </div>
 
-
         <!-- CODE EDITOR -->
-
         <div class="code-window">
 
             <div class="window-top">
-
-                <div class="window-dots">
-                    <span class="dot1"></span>
-                    <span class="dot2"></span>
-                    <span class="dot3"></span>
-                </div>
-
-                <span class="window-title">
-                    ini.dev
-                </span>
-
-                <span class="window-status">
-                    ●
-                </span>
-
+                <span class="window-title">ini.dev</span>
             </div>
 
-
             <div class="code-body">
-
                 <div class="code-line">
                     <span class="line-number">01</span>
                     <span class="code-purple">const</span>
-                    <span class="code-white"> developer</span>
-                    <span class="code-green"> = </span>
+                    <span class="code-white">developer</span>
+                    <span class="code-green">=</span>
                     <span class="code-orange">"Ini"</span>
                 </div>
-
                 <div class="code-line">
                     <span class="line-number">02</span>
                     <span class="code-purple">const</span>
-                    <span class="code-white"> role</span>
-                    <span class="code-green"> = </span>
-                    <span class="code-orange">
-                        "Frontend Developer"
-                    </span>
+                    <span class="code-white">role</span>
+                    <span class="code-green">=</span>
+                    <span class="code-orange">"Frontend Developer"</span>
                 </div>
-
                 <div class="code-line">
                     <span class="line-number">03</span>
                 </div>
-
                 <div class="code-line">
                     <span class="line-number">04</span>
                     <span class="code-purple">const</span>
-                    <span class="code-white"> skills</span>
-                    <span class="code-green"> = [</span>
+                    <span class="code-white">skills</span>
+                    <span class="code-green">= [</span>
                 </div>
-
                 <div class="code-line indent">
                     <span class="line-number">05</span>
-                    <span class="code-orange">"HTML"</span>
-                    <span class="code-green">,</span>
+                    <span class="code-orange">"HTML"</span><span class="code-green">,</span>
                 </div>
-
                 <div class="code-line indent">
                     <span class="line-number">06</span>
-                    <span class="code-orange">"CSS"</span>
-                    <span class="code-green">,</span>
+                    <span class="code-orange">"CSS"</span><span class="code-green">,</span>
                 </div>
-
                 <div class="code-line indent">
                     <span class="line-number">07</span>
                     <span class="code-orange">"JavaScript"</span>
                 </div>
-
                 <div class="code-line">
                     <span class="line-number">08</span>
                     <span class="code-green">]</span>
                 </div>
-
                 <div class="code-line">
                     <span class="line-number">09</span>
                 </div>
-
                 <div class="code-line">
                     <span class="line-number">10</span>
                     <span class="code-purple">function</span>
-                    <span class="code-blue"> build</span>
-                    <span class="code-white">() {</span>
+                    <span class="code-blue">build</span><span class="code-white">() {</span>
                 </div>
-
                 <div class="code-line indent">
                     <span class="line-number">11</span>
                     <span class="code-purple">return</span>
-                    <span class="code-orange">
-                        "something meaningful"
-                    </span>
+                    <span class="code-orange">"something meaningful"</span>
                 </div>
-
                 <div class="code-line">
                     <span class="line-number">12</span>
                     <span class="code-white">}</span>
                 </div>
-
                 <div class="cursor-line">
                     <span class="cursor"></span>
                 </div>
-
             </div>
 
         </div>
 
-
-        <!-- TERMINAL -->
-
+        <!-- TERMINAL (keeps its window dots) -->
         <div class="terminal-window">
-
             <div class="terminal-top">
                 <span class="dot1"></span>
                 <span class="dot2"></span>
                 <span class="dot3"></span>
             </div>
-
             <div class="terminal-body">
-
-                <p>
-                    <span class="terminal-symbol">$</span>
-                    npm run build
-                </p>
-
-                <p class="terminal-success">
-                    ✓ Build successful
-                </p>
-
-                <p class="terminal-location">
-                    → ./portfolio
-                </p>
-
+                <p><span class="terminal-symbol">$</span> npm run build</p>
+                <p class="terminal-success">✓ Build successful</p>
+                <p class="terminal-location">→ ./portfolio</p>
             </div>
-
         </div>
 
-
         <!-- GITHUB CARD -->
-
         <div class="github-card">
-
             <i class="fa-brands fa-github"></i>
-
             <div>
                 <strong>github</strong>
                 <small>Ini120</small>
             </div>
-
-            <span class="github-dot"></span>
-
         </div>
 
-
         <!-- CURSOR -->
-
         <div class="floating-cursor">
             <i class="fa-solid fa-arrow-pointer"></i>
         </div>
@@ -324,290 +241,373 @@
 
 </section>
 
+<div class="divider"></div>
 
-<!-- ABOUT ME -->
+<!-- =========================
+     ABOUT
+========================== -->
+<section class="about-section" id="about">
 
-<div class="line4"></div>
-
-<section class="about-section">
-
-    <div class="about-title">
-        <span>ABOUT ME</span>
-        <h1>A little about<br><em>my journey.</em></h1>
+    <div class="section-head" data-reveal="up">
+        <span class="section-label">ABOUT ME</span>
+        <h2>A little about<br><em>my journey.</em></h2>
     </div>
 
     <div class="about-me">
 
-        <!-- 01 -->
-        <article class="about-card">
-
-            <h2 class="about-head">
+        <article class="about-card" data-reveal="up">
+            <h3 class="about-head">
                 <span>01</span>
                 <div class="short-line"></div>
                 How It Started
-            </h2>
-
+            </h3>
             <div class="paragraph">
-
                 <div class="vertical-line"></div>
-
                 <p>
                     Coding wasn't something I was originally interested in.
                     When I started studying Software Engineering, I honestly
                     wasn't sure how I'd feel about it.
-
                     <br><br>
-
                     But the more I learned, the more curious I became about
                     how websites and applications actually worked.
                 </p>
-
             </div>
-
         </article>
 
-
-        <!-- 02 -->
-        <article class="about-card">
-
-            <h2 class="about-head">
+        <article class="about-card" data-reveal="up" data-delay="150">
+            <h3 class="about-head">
                 <span>02</span>
                 <div class="short-line"></div>
                 Learning For Real
-            </h2>
-
+            </h3>
             <div class="paragraph">
-
                 <div class="vertical-line"></div>
-
                 <p>
                     At one point, I started relying heavily on AI while coding.
                     It made things easier, but I eventually realized I wasn't
                     understanding as much as I should.
-
                     <br><br>
-
                     So I decided to slow down and actually learn. I started
                     studying the fundamentals, practicing, building small
                     projects, making mistakes, and figuring things out myself.
-
                     <br><br>
-
                     It hasn't always been easy, but I can genuinely see the
                     difference between where I started and where I am now.
                 </p>
-
             </div>
-
         </article>
 
-
-        <!-- 03 -->
-        <article class="about-card">
-
-            <h2 class="about-head">
+        <article class="about-card" data-reveal="up" data-delay="300">
+            <h3 class="about-head">
                 <span>03</span>
                 <div class="short-line"></div>
                 Where I Am Now
-            </h2>
-
+            </h3>
             <div class="paragraph">
-
                 <div class="vertical-line"></div>
-
                 <p>
                     I'm still learning, but I'm no longer just trying to make
-                    code work — I want to understand it.
-
+                    code work. I want to understand it.
                     <br><br>
-
                     One of the things I'm most proud of is this portfolio.
                     I built it from scratch, learning along the way and
                     solving problems myself.
-
                     <br><br>
-
                     It's not the final version of what I want to create,
                     but it represents how far I've come.
                 </p>
-
             </div>
-
         </article>
 
     </div>
 
 </section>
 
-<section class="home-work">
+<div class="divider"></div>
 
-    <div class="home-work-top">
+<!-- =========================
+     SKILLS
+========================== -->
+<section class="skills-section" id="skills">
 
-        <div>
-            <div class="work-eyebrow">
-                <span class="work-eyebrow-dot"></span>
-                SELECTED WORK
+    <div class="section-head" data-reveal="up">
+        <span class="section-label">SKILLS &amp; TOOLS</span>
+        <h2>What I build<br><em>with.</em></h2>
+        <p>
+            The core tools I use every day. I focus on getting the
+            fundamentals right before reaching for anything bigger.
+        </p>
+    </div>
+
+    <div class="skills-grid">
+
+        <div class="tool-card" data-reveal="up">
+            <i class="devicon-html5-plain colored"></i>
+            <div>
+                <strong>HTML</strong>
+                <small>Semantic, accessible structure</small>
             </div>
-
-            <h1>Things I've Built</h1>
         </div>
 
+        <div class="tool-card" data-reveal="up" data-delay="80">
+            <i class="devicon-css3-plain colored"></i>
+            <div>
+                <strong>CSS</strong>
+                <small>Layouts, animation &amp; responsive design</small>
+            </div>
+        </div>
+
+        <div class="tool-card" data-reveal="up" data-delay="160">
+            <i class="devicon-javascript-plain colored"></i>
+            <div>
+                <strong>JavaScript</strong>
+                <small>DOM, events &amp; logic</small>
+            </div>
+        </div>
+
+        <div class="tool-card" data-reveal="up" data-delay="240">
+            <i class="devicon-git-plain colored"></i>
+            <div>
+                <strong>Git</strong>
+                <small>Version control</small>
+            </div>
+        </div>
+
+        <div class="tool-card" data-reveal="up" data-delay="320">
+            <i class="devicon-github-original"></i>
+            <div>
+                <strong>GitHub</strong>
+                <small>Hosting &amp; collaboration</small>
+            </div>
+        </div>
+
+        <div class="tool-card" data-reveal="up" data-delay="400">
+            <i class="devicon-vscode-plain colored"></i>
+            <div>
+                <strong>VS Code</strong>
+                <small>My everyday editor</small>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="skills-more" data-reveal="up">
+        <a href="my_skills.html" class="explore-work">
+            See All My Skills
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </div>
+
+    <h3 class="process-title" data-reveal="up">How I approach a project</h3>
+
+    <div class="process">
+
+        <div class="process-step" data-reveal="up">
+            <span>01</span>
+            <h4>Understand</h4>
+            <p>
+                I start by understanding who the page is for and what it
+                needs to do, before writing a single line of code.
+            </p>
+        </div>
+
+        <div class="process-step" data-reveal="up" data-delay="150">
+            <span>02</span>
+            <h4>Build by hand</h4>
+            <p>
+                I write the structure, styling and logic myself, so I
+                understand every part of what I ship and can fix it later.
+            </p>
+        </div>
+
+        <div class="process-step" data-reveal="up" data-delay="300">
+            <span>03</span>
+            <h4>Refine</h4>
+            <p>
+                I test on different screen sizes, tidy up the details and
+                keep improving until it feels right to use.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<div class="divider"></div>
+
+<!-- =========================
+     WORK
+========================== -->
+<section class="home-work" id="work">
+
+    <div class="home-work-top" data-reveal="up">
+        <div class="section-head">
+            <span class="section-label">SELECTED WORK</span>
+            <h2>Things I've <em>built.</em></h2>
+        </div>
         <a href="work.html" class="view-work">
             View All Work
             <i class="fa-solid fa-arrow-right"></i>
         </a>
-
     </div>
-
 
     <div class="home-projects">
 
-        <!-- PROJECT 01 -->
-        <article class="home-project-card">
-
+        <article class="home-project-card" data-reveal="up">
             <div class="project-preview">
-                <img src="Screenshot 2026-09-05 212207.png" alt="Placewick project preview">
+                <img src="Screenshot 2026-09-05 212207.png" alt="Placewick project preview" loading="lazy">
             </div>
-
             <div class="project-content">
-
                 <div class="project-top">
                     <span class="project-number">01</span>
-
-                    <span class="project-category">
-                        Web Platform
-                    </span>
+                    <span class="project-category">Web Platform</span>
                 </div>
-
-                <h2>Placewick</h2>
-
+                <h3>Placewick</h3>
                 <p>
                     A platform concept connecting Nigerian students with
                     verified internship and early-career opportunities.
                 </p>
-
                 <div class="project-footer">
-
                     <div class="project-tech">
                         <span>HTML</span>
                         <span>CSS</span>
                         <span>JavaScript</span>
                     </div>
-
-                    <a href="work.html" class="project-link">
+                    <a href="work.html" class="project-link" aria-label="View Placewick">
                         <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     </a>
-
                 </div>
-
             </div>
-
         </article>
 
-
-        <!-- PROJECT 02 -->
-        <article class="home-project-card">
-
+        <article class="home-project-card" data-reveal="up" data-delay="150">
             <div class="project-preview">
-                <img src="Screenshot 2026-09-05 212246.png" alt="Personal portfolio project preview">
+                <img src="Screenshot 2026-09-05 212246.png" alt="Personal portfolio project preview" loading="lazy">
             </div>
-
             <div class="project-content">
-
                 <div class="project-top">
                     <span class="project-number">02</span>
-
-                    <span class="project-category">
-                        Portfolio
-                    </span>
+                    <span class="project-category">Portfolio</span>
                 </div>
-
-                <h2>Personal Portfolio</h2>
-
+                <h3>Personal Portfolio</h3>
                 <p>
                     A personal developer portfolio built from scratch to
                     showcase my skills, projects and development journey.
                 </p>
-
                 <div class="project-footer">
-
                     <div class="project-tech">
                         <span>HTML</span>
                         <span>CSS</span>
                         <span>JavaScript</span>
                     </div>
-
-                    <a href="work.html" class="project-link">
+                    <a href="work.html" class="project-link" aria-label="View Personal Portfolio">
                         <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     </a>
-
                 </div>
-
             </div>
-
         </article>
 
-
-        <!-- PROJECT 03 -->
-        <article class="home-project-card">
-
+        <article class="home-project-card" data-reveal="up" data-delay="300">
             <div class="project-preview">
-                <img src="calculator.png" alt="JavaScript calculator project preview">
+                <img src="calculator.png" alt="JavaScript calculator project preview" loading="lazy">
             </div>
-
             <div class="project-content">
-
                 <div class="project-top">
                     <span class="project-number">03</span>
-
-                    <span class="project-category">
-                        JavaScript
-                    </span>
+                    <span class="project-category">JavaScript</span>
                 </div>
-
-                <h2>JavaScript Calculator</h2>
-
+                <h3>JavaScript Calculator</h3>
                 <p>
                     A responsive calculator built to practice JavaScript
                     logic, DOM manipulation and event handling.
                 </p>
-
                 <div class="project-footer">
-
                     <div class="project-tech">
                         <span>HTML</span>
                         <span>CSS</span>
                         <span>JavaScript</span>
                     </div>
-
-                    <a href="work.html" class="project-link">
+                    <a href="work.html" class="project-link" aria-label="View JavaScript Calculator">
                         <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     </a>
-
                 </div>
-
             </div>
-
         </article>
 
     </div>
 
-
     <div class="home-work-bottom">
-
         <a href="work.html" class="explore-work">
             View All Projects
             <i class="fa-solid fa-arrow-right"></i>
         </a>
+    </div>
+
+</section>
+
+<!-- =========================
+     CONTACT CTA
+========================== -->
+<section class="contact-cta" id="contact">
+
+    <div class="contact-card" data-reveal="up">
+
+        <span class="section-label">GET IN TOUCH</span>
+
+        <h2>Have an idea?<br><em>Let's build it.</em></h2>
+
+        <p>
+            I'm open to internships, frontend projects and collaborations.
+            If you have something in mind, or just want to say hello,
+            my inbox is always open.
+        </p>
+
+        <div class="contact-actions">
+            <a href="contact.html" class="hero-btn">
+                Send Me a Message
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="hire.html" class="hero-outline-btn">
+                Hire Me
+            </a>
+        </div>
 
     </div>
 
 </section>
 
-   
-<div class="line4"></div>
-<footer>
-    &copy; Aiyenuyo Inioluwa Portfolio
+</main>
+
+<div class="divider"></div>
+
+<!-- =========================
+     FOOTER
+========================== -->
+<footer class="site-footer">
+
+    <div class="footer-brand">
+        <span class="footer-logo">Ini <span>.</span></span>
+        <p>&copy; <span id="year">2026</span> Aiyenuyo Inioluwa. Built from scratch.</p>
+    </div>
+
+    <div class="footer-links">
+        <a href="https://github.com/Ini120" target="_blank" rel="noopener" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/yourusername" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="mailto:ininuyo08@gmail.com" aria-label="Email">
+            <i class="fa-solid fa-envelope"></i>
+        </a>
+    </div>
+
 </footer>
+
+<!-- Back to top button -->
+<a href="#home" class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+</a>
+
 </body>
 </html>
