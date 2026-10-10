@@ -1753,6 +1753,246 @@ footer:not(.site-footer) {
     font-size: 12px;
 }
 
+/* ---------- Private projects ----------
+   The lock panel shows while locked, the links show once
+   unlocked. JavaScript only adds or removes .is-unlocked;
+   these rules do the rest. */
+[data-locked]:not(.is-unlocked) .locked-content,
+[data-locked]:not(.is-unlocked) .preview-button,
+[data-locked].is-unlocked .lock-panel,
+[data-locked].is-unlocked .preview-locked {
+    display: none;
+}
+
+.private-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #D8A85C;
+    border-color: rgba(216, 168, 92, 0.35);
+}
+
+.private-tag i {
+    font-size: 10px;
+}
+
+.preview-locked {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 13px;
+    color: #F5F7F6;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    background: rgba(7, 11, 9, 0.82);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 999px;
+}
+
+.preview-locked i {
+    color: #D8A85C;
+    font-size: 10px;
+}
+
+/* The overlay normally dims the image on hover. While a project is
+   locked, keep the screenshot clear and tuck the padlock into the
+   corner instead, so people can still see the work. */
+[data-locked]:not(.is-unlocked) .preview-overlay {
+    opacity: 1;
+    background: none;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 14px;
+    pointer-events: none;
+}
+
+/* ---------- Screenshot gallery ---------- */
+.shots {
+    min-width: 0;
+}
+
+.shot-main {
+    aspect-ratio: 16 / 9;
+}
+
+.shot-main img {
+    object-position: center top;
+}
+
+.shot-caption {
+    margin-top: 12px;
+    color: #8F9A95;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.shot-thumbs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.shot-thumb {
+    padding: 0;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    cursor: pointer;
+    background: #0C1210;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    opacity: 0.55;
+    transition: opacity 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+.shot-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.shot-thumb:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+.shot-thumb.is-active {
+    opacity: 1;
+    border-color: #7FA6B0;
+}
+
+
+.lock-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #F5F7F6;
+}
+
+.lock-title i {
+    color: #D8A85C;
+    font-size: 12px;
+}
+
+.lock-panel {
+    margin-top: 28px;
+    padding: 22px;
+    background: rgba(216, 168, 92, 0.05);
+    border: 1px solid rgba(216, 168, 92, 0.22);
+    border-radius: 12px;
+}
+
+.lock-intro {
+    max-width: 460px;
+    color: #AAB5AF;
+    font-size: 13.5px;
+    line-height: 1.8;
+}
+
+.lock-intro + .lock-intro {
+    margin-top: 14px;
+}
+
+.lock-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.lock-input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px 14px;
+    color: #F5F7F6;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    background: #0A100D;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.lock-input::placeholder {
+    color: #4F5A54;
+}
+
+.lock-input:focus {
+    border-color: #D8A85C;
+}
+
+.lock-form .hero-btn {
+    flex-shrink: 0;
+}
+
+.lock-note {
+    min-height: 18px;
+    margin-top: 12px;
+    color: #7BC8A4;
+    font-size: 12.5px;
+    line-height: 1.6;
+}
+
+.lock-note.is-error {
+    color: #D9716B;
+}
+
+.lock-ask {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 4px;
+    color: #8F9A95;
+    font-size: 12.5px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.lock-ask i {
+    font-size: 10px;
+    transition: transform 0.3s ease;
+}
+
+.lock-ask:hover {
+    color: #D8A85C;
+}
+
+.lock-ask:hover i {
+    transform: translateX(3px);
+}
+
+/* A short nudge when the password is wrong */
+.shake {
+    animation: shake 0.35s ease;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25%      { transform: translateX(-5px); }
+    75%      { transform: translateX(5px); }
+}
+
+/* For labels that screen readers need but nobody should see */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+
 /* Work page call to action */
 .work-cta {
     max-width: 1250px;
@@ -1830,8 +2070,37 @@ footer:not(.site-footer) {
         font-size: 13px;
     }
 
-    .project-status {
+    .project-status:not(.private-tag) {
         display: none;
+    }
+
+    .lock-panel {
+        padding: 18px;
+    }
+
+    .lock-form {
+        flex-direction: column;
+    }
+
+    .shot-thumbs {
+        gap: 7px;
+    }
+
+    .shot-caption {
+        font-size: 11px;
+    }
+
+    .preview-locked {
+        padding: 6px 10px;
+        font-size: 10px;
+    }
+
+    [data-locked]:not(.is-unlocked) .preview-overlay {
+        padding: 9px;
+    }
+
+    .lock-form .hero-btn {
+        justify-content: center;
     }
 
     .work-cta {
@@ -2350,8 +2619,27 @@ footer:not(.site-footer) {
 
 .form-status {
     min-height: 20px;
-    color: #7FA6B0;
+    color: #7BC8A4;
     font-size: 13px;
+    line-height: 1.6;
+}
+
+.form-status.is-error {
+    color: #D9716B;
+}
+
+.contact-submit:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+/* Hidden from people, visible to bots */
+.honeypot {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }
 
 .contact-bottom {

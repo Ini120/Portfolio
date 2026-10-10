@@ -80,17 +80,68 @@
 ========================== -->
 <section class="all-projects">
 
-    <!-- PROJECT 01 -->
-    <article class="large-project" data-reveal="up">
+    <!--
+        PROJECT 01 - PLACEWICK (private)
 
-        <div class="large-project-preview">
-            <img src="Screenshot 2026-09-05 212207.png" alt="Placewick project preview" loading="lazy">
-            <div class="preview-overlay">
-                <a href="https://ini120.github.io/placewick" class="preview-button" target="_blank" rel="noopener">
-                    Open Project
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
+        The images and the write-up are open to everyone.
+        The links stay hidden until the password is typed in.
+
+        data-hash below is a SHA-256 hash of the password, not
+        the password itself. The current one is:  placewick2026
+        To change it, see the note at the bottom of this file.
+    -->
+    <article class="large-project" data-reveal="up"
+             data-locked="placewick"
+             data-hash="223080bb144f827668541986a867322abf1dc2da97cff4c50a4082fb315633cb">
+
+        <!-- Screenshot gallery. Click a thumbnail to change the big image. -->
+        <div class="shots">
+
+            <div class="large-project-preview shot-main">
+                <img src="placewick-home.png" alt="Placewick homepage" loading="lazy">
+                <div class="preview-overlay">
+
+                    <span class="preview-locked">
+                        <i class="fa-solid fa-lock"></i>
+                        Private project
+                    </span>
+
+                    <a class="preview-button locked-link"
+                       data-href="aHR0cHM6Ly9wbGFjZXdpY2suY29t"
+                       target="_blank" rel="noopener">
+                        Open Project
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </div>
             </div>
+
+            <p class="shot-caption">Homepage</p>
+
+            <div class="shot-thumbs" role="tablist" aria-label="Placewick screenshots">
+
+                <button type="button" class="shot-thumb is-active" role="tab" aria-selected="true"
+                        data-caption="Homepage">
+                    <img src="placewick-home.png" alt="Placewick homepage" loading="lazy">
+                </button>
+
+                <button type="button" class="shot-thumb" role="tab" aria-selected="false"
+                        data-caption="Creating an account">
+                    <img src="placewick-signup.png" alt="Placewick sign up screen" loading="lazy">
+                </button>
+
+                <button type="button" class="shot-thumb" role="tab" aria-selected="false"
+                        data-caption="Onboarding, stage 1 of 7">
+                    <img src="placewick-onboarding.png" alt="Placewick onboarding screen" loading="lazy">
+                </button>
+
+                <button type="button" class="shot-thumb" role="tab" aria-selected="false"
+                        data-caption="Logging back in">
+                    <img src="placewick-login.png" alt="Placewick log in screen" loading="lazy">
+                </button>
+
+            </div>
+
         </div>
 
         <div class="large-project-info">
@@ -99,14 +150,17 @@
                     <span class="large-project-number">01</span>
                     <span class="large-project-category">Web Platform</span>
                 </div>
-                <span class="project-status">Personal Project</span>
+                <span class="project-status private-tag">
+                    <i class="fa-solid fa-lock"></i>
+                    Private
+                </span>
             </div>
 
             <h2>Placewick</h2>
 
             <p>
-                A platform concept designed to connect Nigerian students
-                with verified internship, SIWES and early-career opportunities.
+                A platform designed to connect Nigerian students with
+                verified internship, SIWES and early-career opportunities.
                 The project focuses on creating a clear and accessible
                 experience for students searching for opportunities.
             </p>
@@ -117,12 +171,60 @@
                 <span>JavaScript</span>
             </div>
 
-            <div class="large-project-links">
-                <a href="https://ini120.github.io/placewick" target="_blank" rel="noopener">
+            <!-- Shown while locked -->
+            <div class="lock-panel">
+
+                <h4 class="lock-title">
+                    <i class="fa-solid fa-lock"></i>
+                    Why this one is locked
+                </h4>
+
+                <p class="lock-intro">
+                    Placewick is still in active development. The build
+                    changes from week to week, and some of the flows
+                    aren't finished yet, so rather than send you into a
+                    half-built product I'd rather show you where it
+                    currently stands. The screenshots are the real thing,
+                    taken from the working site.
+                </p>
+
+                <p class="lock-intro">
+                    If you'd like to click through it yourself, I'm happy
+                    to share access. Ask me for the password.
+                </p>
+
+                <form class="lock-form">
+                    <label class="sr-only" for="placewick-pass">Password</label>
+                    <input class="lock-input"
+                           id="placewick-pass"
+                           type="password"
+                           placeholder="Enter password"
+                           autocomplete="off"
+                           spellcheck="false">
+                    <button type="submit" class="hero-btn">
+                        Unlock
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </form>
+
+                <p class="lock-note" role="status" aria-live="polite"></p>
+
+                <a href="contact.html" class="lock-ask">
+                    Request access
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+            <!-- Shown once unlocked -->
+            <div class="large-project-links locked-content">
+                <a class="locked-link" data-href="aHR0cHM6Ly9wbGFjZXdpY2suY29t"
+                   target="_blank" rel="noopener">
                     View Live Project
                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
-                <a href="https://github.com/Ini120/placewick" target="_blank" rel="noopener">
+                <a class="locked-link" data-href="aHR0cHM6Ly9naXRodWIuY29tL0luaTEyMC9wbGFjZXdpY2s="
+                   target="_blank" rel="noopener">
                     View Code
                     <i class="fa-brands fa-github"></i>
                 </a>
@@ -393,6 +495,28 @@
 <a href="#top" class="back-to-top" aria-label="Back to top">
     <i class="fa-solid fa-arrow-up"></i>
 </a>
+
+<!--
+    ===================================================
+    CHANGING THE PLACEWICK PASSWORD
+
+    The page never holds the password, only a SHA-256
+    hash of it. To set a new one, get its hash and paste
+    that into data-hash on the Placewick article above.
+
+    Easiest way, in your browser console on any page:
+
+        crypto.subtle.digest("SHA-256",
+            new TextEncoder().encode("your new password"))
+          .then(b => console.log(
+            [...new Uint8Array(b)]
+              .map(x => x.toString(16).padStart(2,"0")).join("")));
+
+    Or in a terminal:
+
+        echo -n "your new password" | sha256sum
+    ===================================================
+-->
 
 </body>
 </html>

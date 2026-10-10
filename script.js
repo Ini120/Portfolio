@@ -158,32 +158,86 @@
 
     /* =========================
        6. CONTACT FORM
-       There is no server, so the form opens the visitor's
-       email app with the message already filled in.
+
+       If data-endpoint on the form holds a form-service URL
+       (Formspree, Web3Forms, FormSubmit), the message is sent in
+       the background and the visitor stays on the page.
+
+       If it is empty, the form falls back to opening the visitor's
+       own email app with the message already written out.
     ========================= */
     const form = document.querySelector(".contact-form");
 
     if (form) {
         const status = form.querySelector(".form-status");
+        const button = form.querySelector("button[type='submit']");
+        const buttonText = button ? button.innerHTML : "";
 
-        form.addEventListener("submit", (event) => {
+        const say = (text, ok) => {
+            if (!status) return;
+            status.textContent = text;
+            status.classList.toggle("is-error", ok === false);
+        };
+
+        form.addEventListener("submit", async (event) => {
             event.preventDefault();
 
+            const endpoint = form.dataset.endpoint;
             const data = new FormData(form);
-            const name = data.get("name").trim();
-            const email = data.get("email").trim();
-            const subject = data.get("subject").trim() || `Portfolio message from ${name}`;
-            const message = data.get("message").trim();
 
-            const body = `${message}\n\nFrom: ${name}\nEmail: ${email}`;
+            // No endpoint set yet, so hand the message to their email app.
+            if (!endpoint) {
+                const name = data.get("name").trim();
+                const subject = data.get("subject").trim() || `Portfolio message from ${name}`;
+                const body = `${data.get("message").trim()}\n\nFrom: ${name}\nEmail: ${data.get("email").trim()}`;
 
-            window.location.href =
-                `mailto:${form.dataset.email}` +
-                `?subject=${encodeURIComponent(subject)}` +
-                `&body=${encodeURIComponent(body)}`;
+                window.location.href =
+                    `mailto:${form.dataset.email}` +
+                    `?subject=${encodeURIComponent(subject)}` +
+                    `&body=${encodeURIComponent(body)}`;
 
-            if (status) {
-                status.textContent = "Your email app should now open with your message ready to send.";
+                say("Your email app should now open with your message ready to send.");
+                return;
+            }
+
+            if (button) {
+                button.disabled = true;
+                button.innerHTML = "Sending...";
+            }
+            say("");
+
+            try {
+                const response = await fetch(endpoint, {
+                    method: "POST",
+                    body: data,
+                    headers: { Accept: "application/json" }
+                });
+
+                // contact.php explains itself; other services may not
+                let result = {};
+                try {
+                    result = await response.json();
+                } catch {
+                    result = {};
+                }
+
+                if (response.ok) {
+                    form.reset();
+                    say(result.message || "Thanks. Your message has been sent, I'll get back to you soon.");
+                } else {
+                    say(
+                        result.message ||
+                        "Something went wrong. Please email me directly at " + form.dataset.email,
+                        false
+                    );
+                }
+            } catch {
+                say("Couldn't send that. Check your connection, or email me at " + form.dataset.email, false);
+            }
+
+            if (button) {
+                button.disabled = false;
+                button.innerHTML = buttonText;
             }
         });
     }
@@ -194,4 +248,127 @@
     ========================= */
     const year = document.getElementById("year");
     if (year) year.textContent = new Date().getFullYear();
+
+
+    /* =========================
+       9. SCREENSHOT GALLERIES
+       Clicking a thumbnail swaps the big image above it.
+    ========================= */
+    document.querySelectorAll(".shots").forEach((gallery) => {
+        const main    = gallery.querySelector(".shot-main img");
+        const caption = gallery.querySelector(".shot-caption");
+        const thumbs  = gallery.querySelectorAll(".shot-thumb");
+
+        if (!main || !thumbs.length) return;
+
+        thumbs.forEach((thumb) => {
+            thumb.addEventListener("click", () => {
+                const picture = thumb.querySelector("img");
+                if (!picture) return;
+
+                main.src = picture.src;
+                main.alt = picture.alt;
+
+                if (caption) caption.textContent = thumb.dataset.caption || "";
+
+                thumbs.forEach((other) => {
+                    const chosen = other === thumb;
+                    other.classList.toggle("is-active", chosen);
+                    other.setAttribute("aria-selected", String(chosen));
+                });
+            });
+        });
+    });
+
+
+    /* =========================
+       8. PRIVATE PROJECTS
+
+       A project marked data-locked keeps its images and
+       description on show, but holds its links back until
+       the right password is typed in.
+
+       The password itself is never in the page. Only a
+       SHA-256 hash of it is, in data-hash.
+    ========================= */
+    const lockedProjects = document.querySelectorAll("[data-locked]");
+
+    if (lockedProjects.length) {
+
+        const hash = async (text) => {
+            const bytes = new TextEncoder().encode(text);
+            const digest = await crypto.subtle.digest("SHA-256", bytes);
+            return Array.from(new Uint8Array(digest))
+                .map((b) => b.toString(16).padStart(2, "0"))
+                .join("");
+        };
+
+        const unlock = (project) => {
+            project.classList.add("is-unlocked");
+
+            // Put the real addresses onto the links
+            project.querySelectorAll("[data-href]").forEach((link) => {
+                try {
+                    link.href = atob(link.dataset.href);
+                } catch {
+                    /* leave it alone if the value is malformed */
+                }
+            });
+
+            // Stay unlocked while they look around, forget on tab close
+            try {
+                sessionStorage.setItem("unlocked:" + project.dataset.locked, "1");
+            } catch {
+                /* private browsing blocks this, which is fine */
+            }
+        };
+
+        lockedProjects.forEach((project) => {
+            const key    = project.dataset.locked;
+            const form   = project.querySelector(".lock-form");
+            const input  = project.querySelector(".lock-input");
+            const note   = project.querySelector(".lock-note");
+
+            // Already unlocked earlier in this visit
+            try {
+                if (sessionStorage.getItem("unlocked:" + key) === "1") {
+                    unlock(project);
+                    return;
+                }
+            } catch {
+                /* carry on and ask for the password */
+            }
+
+            if (!form || !input) return;
+
+            form.addEventListener("submit", async (event) => {
+                event.preventDefault();
+
+                const typed = input.value.trim();
+                if (!typed) return;
+
+                // crypto.subtle only exists on https and localhost
+                if (!window.crypto || !crypto.subtle) {
+                    if (note) {
+                        note.textContent = "This only works on the live site, not from a local file.";
+                        note.classList.add("is-error");
+                    }
+                    return;
+                }
+
+                if (await hash(typed) === project.dataset.hash) {
+                    unlock(project);
+                } else {
+                    input.value = "";
+                    project.classList.add("shake");
+                    setTimeout(() => project.classList.remove("shake"), 400);
+
+                    if (note) {
+                        note.textContent = "That password isn't right. Ask me and I'll send it over.";
+                        note.classList.add("is-error");
+                    }
+                }
+            });
+        });
+    }
 })();
