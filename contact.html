@@ -125,8 +125,22 @@
                     <p>I'll get back to you as soon as I can.</p>
                 </div>
 
-                <!-- data-email is where messages go -->
-                <form class="contact-form" data-email="ininuyo08@gmail.com">
+                <form class="contact-form"
+                      data-endpoint="https://api.web3forms.com/submit"
+                      data-email="ininuyo08@gmail.com">
+
+                    <!-- ACCESS KEY -->
+                    <input type="hidden" name="access_key" value="8a73f2b1-31e0-4948-a4b8-c15f7dcda3db">
+
+                    <!-- What the email lands in your inbox as -->
+                    <input type="hidden" name="from_name" value="Portfolio Contact Form">
+
+                    <!-- Spam trap. Real people never see it, bots fill it in. -->
+                    <div class="honeypot" aria-hidden="true">
+                        <label for="website">Leave this empty</label>
+                        <input type="text" id="website" name="botcheck" tabindex="-1" autocomplete="off">
+                    </div>
+
 
                     <div class="form-row">
                         <div class="form-group">

@@ -182,8 +182,13 @@
         form.addEventListener("submit", async (event) => {
             event.preventDefault();
 
-            const endpoint = form.dataset.endpoint;
             const data = new FormData(form);
+
+            // Treat an unset access key the same as having no endpoint,
+            // so the form still does something useful before it's configured
+            const key = data.get("access_key");
+            const configured = !key || !String(key).startsWith("PASTE_");
+            const endpoint = configured ? form.dataset.endpoint : "";
 
             // No endpoint set yet, so hand the message to their email app.
             if (!endpoint) {
@@ -221,9 +226,12 @@
                     result = {};
                 }
 
-                if (response.ok) {
+                // Web3Forms answers 200 with success:false when the key is wrong
+                const sent = response.ok && result.success !== false;
+
+                if (sent) {
                     form.reset();
-                    say(result.message || "Thanks. Your message has been sent, I'll get back to you soon.");
+                    say("Thanks. Your message has been sent, I'll get back to you soon.");
                 } else {
                     say(
                         result.message ||
